@@ -18,6 +18,10 @@ $.init.add((done) => {
     done();
 });
 
+//初始化MongoDB
+$.init.load(path.resolve(__dirname, 'init', 'mongodb.js'));
+$.init.load(path.resolve(__dirname, 'models'));
+
 //初始化
 $.init((err) => {
     if (err) {
